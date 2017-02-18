@@ -1,3 +1,2 @@
-{"type":"basic", "front": "What year was the OJ Simpson Trial?", "back":"1995"}
 {"type":"basic", "front": "What disease did FDR have?", "back":"Polio"}
 {"type":"cloze", "text": "D-Day occured on June 6th 1944", "cloze":[5]}

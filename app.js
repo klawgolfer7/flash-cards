@@ -32,8 +32,8 @@ var createQuestion = [
 	},
 	{
 		name: 'back',
-		type, 'input',
-		message, 'What should be on the back of the card?',
+		type: 'input',
+		message: 'What should be on the back of the card?',
 		when: function (answers) {
 			return (answer.type === 'basic');
 		}
@@ -51,7 +51,7 @@ var createQuestion = [
 
 var runPrompt = function () {
 	inquirer.prompt(runQuestion).then(function (answers) {
-		if (answers.runType) === 'View') {
+		if (answers.runType === 'View') {
 		createCards();
 		}	else {
 		createCardPrompt();
@@ -110,7 +110,7 @@ var createCardPrompt = function () {
 
 // Save the new cards to cards.txt
 var logCard = function (answers) {
-	var appendText:
+	var appendText;
 	if (answers.type === 'basic') {
 		appendText = {
 			type: answers.type,
