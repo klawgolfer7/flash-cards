@@ -1,7 +1,7 @@
 // require NPM package and flashcards module.
 var inquirer = require('inquirer');
 var fs = require('fs');
-var flashcards = require('./flashcards.js');
+var Flashcards = require('./flashcards.js');
 
 // file with flashcard questions.
 var cardFile = 'cards.txt';
@@ -15,7 +15,7 @@ var runQuestion = {
 };
 
 // question to ask when creating new cards
-var createQuestion = [
+var createCardQuestions = [
 	{
 		name: 'type',
 		type: 'list',
@@ -35,7 +35,7 @@ var createQuestion = [
 		type: 'input',
 		message: 'What should be on the back of the card?',
 		when: function (answers) {
-			return (answer.type === 'basic');
+			return (answers.type === 'basic');
 		}
 	},
 	{
